@@ -46,10 +46,18 @@ defmodule Grid do
         adjacent_cell > cell and adjacent_cell < 9
       end)
 
-    (acc ++ [{row, column, cell}] ++ Enum.map(adjacent, &basin(&1, acc))) |> List.flatten() |> Enum.uniq()
+    (acc ++ [{row, column, cell}] ++ Enum.map(adjacent, &basin(&1, acc)))
+    |> List.flatten()
+    |> Enum.uniq()
   end
 end
 
 Grid.low_points() |> Enum.map(&(elem(&1, 2) + 1)) |> Enum.sum() |> IO.inspect()
 
-Grid.low_points() |> Enum.map(&(Grid.basin(&1, []))) |> Enum.map(&length(&1)) |> Enum.sort(:desc) |> Enum.take(3) |> Enum.product() |> IO.inspect()
+Grid.low_points()
+|> Enum.map(&Grid.basin(&1, []))
+|> Enum.map(&length(&1))
+|> Enum.sort(:desc)
+|> Enum.take(3)
+|> Enum.product()
+|> IO.inspect()
