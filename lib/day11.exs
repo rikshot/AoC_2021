@@ -1,4 +1,4 @@
-{:ok, file} = File.read("day11.txt")
+{:ok, file} = File.read("input/day11.txt")
 
 numbers =
   String.split(file, "\n")
@@ -78,6 +78,7 @@ Enum.reduce(1..100, {numbers, 0}, fn _, {numbers, flashed} ->
   {n, f} = Octopi.step(numbers)
   {n, flashed + f}
 end)
+|> elem(1)
 |> IO.inspect()
 
 Octopi.synchronized(numbers, 1) |> IO.inspect()

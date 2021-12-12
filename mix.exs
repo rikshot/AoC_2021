@@ -12,7 +12,8 @@ defmodule Aoc.MixProject do
 
   def deps do
     [
-      {:math, "~> 0.7.0"}
+      {:math, "~> 0.7.0"},
+      {:libgraph, "~> 0.13"}
     ]
   end
 end

@@ -1,4 +1,4 @@
-{:ok, file} = File.read("day5.txt")
+{:ok, file} = File.read("input/day5.txt")
 
 coordinates =
   String.split(file, "\n")

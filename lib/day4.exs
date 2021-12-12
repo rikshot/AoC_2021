@@ -1,4 +1,4 @@
-{:ok, file} = File.read("day4.txt")
+{:ok, file} = File.read("input/day4.txt")
 [raw_numbers | raw_boards] = String.split(file, "\n\n")
 numbers = String.split(raw_numbers, ",") |> Enum.map(&String.to_integer/1)
 

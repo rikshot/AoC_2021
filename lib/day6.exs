@@ -1,4 +1,4 @@
-{:ok, file} = File.read("day6.txt")
+{:ok, file} = File.read("input/day6.txt")
 
 state = String.split(file, ",") |> Enum.map(&String.to_integer/1)
 

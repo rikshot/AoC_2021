@@ -1,6 +1,6 @@
 require Math
 
-{:ok, file} = File.read("day7.txt")
+{:ok, file} = File.read("input/day7.txt")
 
 positions = String.split(file, ",") |> Enum.map(&String.to_integer/1)
 

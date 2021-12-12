@@ -1,4 +1,4 @@
-{:ok, file} = File.read("day10.txt")
+{:ok, file} = File.read("input/day10.txt")
 lines = String.split(file, "\n")
 
 defmodule Parser do

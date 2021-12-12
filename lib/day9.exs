@@ -1,4 +1,4 @@
-{:ok, file} = File.read("day9.txt")
+{:ok, file} = File.read("input/day9.txt")
 
 defmodule Grid do
   @grid String.split(file, "\n")

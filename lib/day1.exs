@@ -1,4 +1,4 @@
-{:ok, input} = File.read("day1.txt")
+{:ok, input} = File.read("input/day1.txt")
 numbers = String.split(input, "\n") |> Enum.map(&String.to_integer/1)
 
 Enum.chunk_every(numbers, 2, 1, :discard)

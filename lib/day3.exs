@@ -1,4 +1,4 @@
-{:ok, input} = File.read("day3.txt")
+{:ok, input} = File.read("input/day3.txt")
 numbers = String.split(input, "\n")
 
 defmodule Ratings do

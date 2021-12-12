@@ -1,4 +1,4 @@
-{:ok, input} = File.read("day2.txt")
+{:ok, input} = File.read("input/day2.txt")
 
 commands =
   String.split(input, "\n")
